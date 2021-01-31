@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BasicCalc</string>
+    <string name="op1_hint">Enter Operand 1 in Decimal (ex: 1.0)</string>
+    <string name="op2_hint">Enter Operand 2 in Decimal (ex: 1.0)</string>
+    <string name="result_label_text">Result:</string>
+    <string name="calculated_value_label_text">Calculated Value</string>
+    <string name="op_plus_text">+</string>
+    <string name="op_minus_text">-</string>
+    <string name="op_multi_text">X</string>
+    <string name="op_div_text">/</string>
+    <string name="op_pct_text">%</string>
+    <string name="op_sqrt_text">√</string>
+</resources>
