@@ -1,3 +1,10 @@
+/*
+Basic Calculator Application
+Inputs: Two positive decimal numbers input from user
+Outputs: Results of arithmetic in double floating point
+Copyright Tiffani M. Shilts Portland, OR January 2021
+ */
+
 package com.bignerdranch.android.basiccalc;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // assign id to variables
         minput1 = (EditText) findViewById(R.id.editText_op1);
         minput2 = (EditText) findViewById(R.id.editText_op2);
 
@@ -50,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     double result = Double.valueOf(minput1.getText().toString()) +
                             Double.valueOf(minput2.getText().toString());
-                    moutput.setText(String.format("%.03f", result));
+                    moutput.setText("" + result);
                 }
             }
         });
@@ -71,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     double result = Double.valueOf(minput1.getText().toString()) -
                             Double.valueOf(minput2.getText().toString());
-                    moutput.setText(String.format("%.03f", result));
+                    moutput.setText("" + result);
                 }
             }
         });
@@ -92,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     double result = Double.valueOf(minput1.getText().toString()) *
                             Double.valueOf(minput2.getText().toString());
-                    moutput.setText(String.format("%.03f", result));
+                    moutput.setText("" + result);
                 }
             }
         });
@@ -114,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     double result = Double.valueOf(minput1.getText().toString()) /
                             Double.valueOf(minput2.getText().toString());
-                    moutput.setText(String.format("%.03f", result));
+                    moutput.setText("" + result);
                 }
             }
         });
@@ -126,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isValidInput(true, false)) {
                     Toast.makeText(MainActivity.this,
-                            "Please enter a positive number for operand one",
+                            "Please enter a positive number decimal for operand one.",
                             Toast.LENGTH_SHORT).show();
 
                     clear_input();
@@ -134,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                     minput1.requestFocus();
                 } else {
                     double result = Double.valueOf(minput1.getText().toString()) / 100.0;
-                    moutput.setText(String.format("%.03f", result));
+                    moutput.setText("%" + result);
                 }
             }
         });
@@ -146,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isValidInput(true, false)) {
                     Toast.makeText(MainActivity.this,
-                            "Please enter a positive number for operand one",
+                            "Please enter a positive decimal number for operand one.",
                             Toast.LENGTH_SHORT).show();
 
                     clear_input();
@@ -154,13 +162,14 @@ public class MainActivity extends AppCompatActivity {
                     minput1.requestFocus();
                 } else {
                     double result = Math.sqrt(Double.valueOf(minput1.getText().toString()));
-                    moutput.setText(String.format("%.03f", result));
+                    moutput.setText("" + result);
                 }
             }
         });
 
     }
 
+    // input true/false for needed input. will return true if there is input greater than or equal to zero in the needed input, false otherwise
     private boolean isValidInput(boolean NeedI1, boolean NeedI2)
     {
         String inputOneString = minput1.getText().toString();
@@ -193,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // clear both operands and result text
     private void clear_input()
     {
         minput1.setText("");

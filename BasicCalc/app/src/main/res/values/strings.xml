@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BasicCalc</string>
-    <string name="op1_hint">Enter Operand 1 in Decimal (ex: 1.0)</string>
-    <string name="op2_hint">Enter Operand 2 in Decimal (ex: 1.0)</string>
+    <string name="op1_hint">enter operand one in decimal (ex: 1.0)</string>
+    <string name="op2_hint">enter operand two in decimal (ex: 1.0)</string>
     <string name="result_label_text">Result:</string>
     <string name="calculated_value_label_text">Calculated Value</string>
     <string name="op_plus_text">+</string>
